@@ -1,0 +1,41 @@
+# === Python & Окружение ===
+.venv/
+__pycache__/
+*.pyc
+*.pyo
+*.pyd
+.pytest_cache/
+.mypy_cache/
+.ruff_cache/
+
+# === Зависимости uv ===
+# Блокировку зависимостей (uv.lock) оставляем, а папки сборки игнорируем
+.wheels/
+dist/
+build/
+
+# === Нейросети (Ultralytics / YOLO) ===
+# Игнорируем скачанные веса моделей (чтобы не пушить 120МБ файлы на GitHub)
+*.pt
+*.onnx
+runs/
+.ultralytics/
+
+# === Специфика твоего проекта (Ski Motion) ===
+# Игнорируем исходные, временные видео и сгенерированные результаты анализа
+*.mp4
+*.avi
+*.mov
+temp_*
+result_*.json
+pose_timeline.json
+
+# === Настройки редакторов и ОС ===
+.vscode/
+.idea/
+.DS_Store
+Thumbs.db
+
+# === Секреты ===
+.env
+*.local
